@@ -23,20 +23,20 @@ public class HrisTest {
 	 @Test
 	 public void Incorrect_password_test() {
 
-		 Assert.assertEquals("Invalid Login", login.Invalid_Password("adityaagrawal", "Adi"));
+		 Assert.assertEquals("Invalid Login", login.Invalid_Password("Username", "Adi"));
 	 }
 	 
 	
 	 @Test
 	 public void Blank_Password_Test() {
 		 
-		 Assert.assertNotEquals(null,login.Blank_Password_Field("adityaagrawal",""));
+		 Assert.assertNotEquals(null,login.Blank_Password_Field("Username",""));
 	 }
 	 
 	 
     @Test(dependsOnMethods= {"Incorrect_password_test","Blank_Password_Test"})
 	public void Correct_credientials_test() {
-		Assert.assertFalse(login.Valid_Crendentials("adityaagrawal","Aditya@321#").isloginpage());
+		Assert.assertFalse(login.Valid_Crendentials("Username","Password").isloginpage());
 	}
 	
 
